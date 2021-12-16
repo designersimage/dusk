@@ -8,6 +8,7 @@ import { setStartDate, setEndDate } from '../actions/filters';
 export const MonthSelector = (props) => {
     
     const toggleMonthSelectMenu = () => {
+        alert(props.monthMenuOpen);
         props.monthMenuOpen === ' open' ? props.onMonthMenuChange('') : props.onMonthMenuChange(' open');
     };
 
@@ -31,7 +32,7 @@ export const MonthSelector = (props) => {
 
     return (
         <div className="month-selector__wrapper">
-            <button className="month-selector__selected" onClick={toggleMonthSelectMenu} tabIndex={1}>
+            <button className="month-selector__selected" onClick={toggleMonthSelectMenu} type="button">
                 <span className="month-selector__title">{moment(props.views.calendarDate).format('MMMM')}</span>
                 <ExpandMore className="material-icons" />
             </button>
