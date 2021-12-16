@@ -8,8 +8,7 @@ import { setStartDate, setEndDate } from '../actions/filters';
 export const MonthSelector = (props) => {
     
     const toggleMonthSelectMenu = () => {
-        alert(props.monthMenuOpen);
-        props.monthMenuOpen === ' open' ? props.onMonthMenuChange('') : props.onMonthMenuChange(' open');
+        (props.monthMenuOpen == ' open') ? props.onMonthMenuChange('') : props.onMonthMenuChange(' open');
     };
 
     const selectMonth = (month) => {

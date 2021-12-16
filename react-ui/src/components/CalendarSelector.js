@@ -9,20 +9,21 @@ const CalendarSelector = () => {
     const [yearMenuOpen, setYearMenuOpen] = useState('');
 
     const onMonthMenuChange = (menuOpen) => {
-        if (monthMenuOpen === ' open') {
+        alert(menuOpen);
+        if (monthMenuOpen === menuOpen) {
             setMonthMenuOpen('');
         } else {
             setYearMenuOpen('');
-            setMonthMenuOpen(' open');
+            setMonthMenuOpen(menuOpen);
         }
     };
 
     const onYearMenuChange = (menuOpen) => {
-        if (yearMenuOpen === ' open') {
+        if (yearMenuOpen === menuOpen) {
             setYearMenuOpen('');
         } else {
             setMonthMenuOpen('');
-            setYearMenuOpen(' open');
+            setYearMenuOpen(menuOpen);
         }
     };
 
