@@ -7,6 +7,7 @@ import { setStartDate, setEndDate } from '../actions/filters';
 
 export const MonthSelector = (props) => {
     
+    document.querySelector('.month-selector__selected').tabIndex = 0;
     const toggleMonthSelectMenu = () => {
         props.monthMenuOpen === ' open' ? props.onMonthMenuChange('') : props.onMonthMenuChange(' open');
     };
