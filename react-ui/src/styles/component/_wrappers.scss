@@ -1,0 +1,214 @@
+.calendar-active__wrapper {
+    border: solid 1px #e8e8e8;
+    position: relative;
+}
+
+.calendar-form__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 24px);
+    margin: 0 $s-size 0;
+    padding: $m-size 0 0;
+    border-top: solid 1px $border;
+
+    > div {
+        margin: 0 0 $s-size 0;
+    }
+    input {
+        color: #999;
+    }
+    ::placeholder {
+        color: #ccc;
+        font-style: italic;
+    }
+}
+
+.calendar-monthly__wrapper, .calendar-weekly__wrapper, .calendar-yearly__wrapper {
+    display: block;
+    background: white;
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.hide-mobile {
+    display: none;
+}
+
+.calendar-list__wrapper {
+    display: block;
+    background: white;
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.calendar-selector__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: $s-size;
+    margin: $m-size auto;
+    background-color: #eee;
+    border: solid 1px #e8e8e8;
+    color: #999;
+}
+
+.color-selector__wrapper {
+    position: relative;
+    font-size: $s-size;
+    color: #999;
+    margin: 0;
+}
+
+.date-selector__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.loading-page__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.month-selector__wrapper {
+    position: relative;
+    height: 100%;
+    font-size: $s-size;
+    color: #999;
+    margin: 0 0 0 -1px;
+}
+
+.type-selector__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-self: end;
+    height: 100%;
+    margin-top: $s-size;
+    width: fit-content;
+}
+
+.year-selector__wrapper {
+    position: relative;
+    height: 100%;
+    font-size: $s-size;
+    color: #999;
+    margin: 0 0 0 -1px;
+    width: fit-content;
+}
+
+@media only screen and (min-width: $mobile) {
+    .calendar-form__wrapper {
+        width: calc(100% - 32px);
+        margin: 0 $m-size 0;
+        padding: $m-size 0 0;
+    
+        > div {
+            margin: 0 0 $m-size 0;
+        }
+    }
+
+    .calendar-selector__wrapper {
+        padding: $m-size;
+    }
+
+    .type-selector__wrapper {
+        margin-top: $m-size;
+    }
+}
+
+@media only screen and (min-width: $tabletSmall) {
+    .calendar-form__wrapper {
+        width: calc(100% - 32px);
+        margin: 0 $m-size 0;
+        padding: $l-size 0 0;
+    
+        > div {
+            margin: 0 0 $l-size 0;
+        }
+    }
+
+    .calendar-selector__wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: $m-size;
+        margin: $l-size auto;
+        background-color: #eee;
+        border: solid 1px #e8e8e8;
+        color: #999;
+    }
+
+    .type-selector__wrapper {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+    .calendar-form__wrapper {
+        width: calc(100% - 64px);
+        margin: 0 $l-size 0;
+        padding: $xxl-size 0 0;
+    
+        > div {
+            margin: 0 0 $l-size 0;
+        }
+    }
+
+    .calendar-selector__wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: $m-size;
+        margin: $l-size auto;
+        background-color: #eee;
+        border: solid 1px #e8e8e8;
+        color: #999;
+    }
+
+    .type-selector__wrapper {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    .calendar-active__wrapper {
+        border: none;
+        border-top: solid 1px $border;
+        border-bottom: solid 1px $border;
+        border-left: solid 1px $border;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+    
+    .calendar-monthly__wrapper, .calendar-weekly__wrapper, .calendar-yearly__wrapper, .calendar-list__wrapper, .calendar-add, .calendar-edit, .calendar-view {
+        border-right: solid 1px $border;
+        width: 100%;
+    }
+    .calendar-monthly__wrapper, .calendar-weekly__wrapper, .calendar-yearly__wrapper {
+        flex: 1.5;
+        padding: $s-size;
+    }
+
+    .calendar-list__wrapper, .calendar-add, .calendar-edit, .calendar-view {
+        flex: 1;
+    }
+}

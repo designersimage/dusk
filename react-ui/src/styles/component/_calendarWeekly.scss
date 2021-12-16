@@ -1,0 +1,277 @@
+.calendar-weekly__title {
+    display: flex;
+    font-size: $m-font;
+    margin: 0;
+    padding: $s-size 0;
+    position: relative;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.calender-weekly__view {
+    display: flex;
+    flex-direction: column;
+    padding: 0 $s-size;
+    width: 100%;
+}
+
+.calendar-weekly__weekday {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $s-size;
+
+    .weekday-title {
+        color: #999;
+        font-size: $xs-font;
+        line-height: $xs-font;
+        letter-spacing: 0;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-align: center;
+        text-transform: uppercase;
+        padding: $s-size $s-size 0 0;
+    }
+    .current-date {
+        color: $main;
+        font-weight: bold;
+    }
+
+    .calendar-day {
+        align-items: center;
+        border: solid 1px $border;
+        display: flex;
+        font-size: $xxs-font;
+        padding-top: 80%;
+        position: relative;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .content {
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        cursor: pointer;
+
+        svg {
+            fill: $grey;
+            position: absolute;
+            bottom: 0;
+            right: $xxs-size;
+        }
+    }
+    
+    .day-num {
+        position: relative;
+        padding: $xs-size;
+        font-size: $s-font;
+        margin-left: 2px;
+    }
+    
+    .day-event {
+        color: white;
+        font-size: $xs-font;
+        padding: $xxxs-size $s-size;
+        word-break: break-all;
+    }
+    
+    .current-day {
+        color: $main;
+        border-left: solid 2px $main;
+    
+        .day-num {
+            margin-left: 0px;
+            font-weight: bold;
+        }
+    }
+}
+
+@media only screen and (min-width: $mobile) {
+    .calendar-weekly__title {
+        padding: $m-size 0;
+    }
+
+    .calender-weekly__view {
+        padding: 0 $m-size;
+    }
+
+    .calendar-weekly__weekday {
+        margin-bottom: $m-size;
+
+        .weekday-title {
+            font-size: $s-font;
+            padding: $s-size $m-size 0 0;
+        }
+    }
+}
+
+@media only screen and (min-width: $tabletSmall) {
+    .calendar-weekly__title {
+        font-size: $l-font;
+        padding: $m-size 0;
+    }
+
+    .calender-weekly__view {
+        display: grid;
+        grid-gap: $m-size;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 $m-size;
+    }
+
+    .calendar-weekly__weekday {
+        margin-bottom: $m-size;
+
+        .weekday-title {
+            font-size: $s-font;
+            padding: $s-size $m-size 0 0;
+        }
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+    .calendar-weekly__title {
+        font-size: $xxl-font;
+        padding: $m-size 0;
+    }
+
+    .calender-weekly__view {
+        display: grid;
+        grid-gap: 0;
+        grid-template-columns: repeat(4, 1fr);
+        margin-left: -1px;
+        padding: 0 $m-size;
+    }
+
+    .calendar-weekly__weekday {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: $s-size;
+    
+        .weekday-title {
+            font-size: $m-font;
+            padding: $s-size 0;
+        }
+
+        .current-date {
+            color: $main;
+            font-weight: bold;
+        }
+    
+        .calendar-day {
+            align-items: center;
+            border: solid 1px $border;
+            display: flex;
+            font-size: $xxs-font;
+            padding-top: 100%;
+            position: relative;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .content {
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+    
+            svg {
+                fill: $grey;
+                position: absolute;
+                bottom: 0;
+                right: $xxs-size;
+            }
+        }
+        
+        .day-num {
+            position: relative;
+            padding: $xs-size;
+            font-size: $m-font;
+            margin-left: 2px;
+        }
+        
+        .day-event {
+            color: white;
+            font-size: $xs-font;
+            padding: $xxxs-size $s-size;
+            word-break: break-all;
+        }
+        
+        .current-day {
+            color: $main;
+            border-top: solid 4px $main;
+        
+            .day-num {
+                margin-top: -4px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $tabletLarge) {
+    .calendar-weekly__title {
+        font-size: $xxl-font;
+        padding: $m-size 0;
+    }
+
+    .calender-weekly__view {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .calendar-weekly__weekday {
+        margin-bottom: $m-size;
+        
+        .calendar-day {
+            border: none;
+            border: solid 1px $border;
+            padding-top: 120%;
+        }
+
+        .day-event {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .hidden {
+            text-indent: -999px;
+        }
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    .calendar-weekly__title {
+        font-size: $xl-font;
+        padding: $m-size 0 $xl-size;
+    }
+
+    .calendar-weekly__weekday {
+        margin-bottom: $m-size;
+
+        .weekday-title {
+            font-size: $s-font;
+            padding: $s-size 0;
+            writing-mode: horizontal-tb;
+            text-align: center;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        .current-date {
+            color: $main;
+            font-weight: bold;
+        }
+
+        .day-num {
+            padding: $xxxs-size;
+            font-size: $s-font;
+            margin-left: $xxxs-size;
+        }
+    }
+}

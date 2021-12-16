@@ -1,0 +1,78 @@
+// App Colors
+$border: rgb(232, 232, 232);
+$closer: rgb(225, 121, 121);
+$darkgrey: rgb(51, 51, 51);
+$grey: rgb(102, 102, 102);
+$lightgrey: rgb(204, 204, 204);
+$main: rgb(121, 185, 225);
+$orange: rgb(249, 193, 132);
+$pink: rgb(239, 33, 118);
+
+// Calendar Colors
+$banana: rgb(245, 192, 58);
+$basil: rgb(17, 129, 71);
+$blueberry: rgb(66, 78, 178);
+$flamingo: rgb(228, 124, 116);
+$grape: rgb(142, 26, 167);
+$graphite: rgb(97, 97, 97);
+$lavendar: rgb(122, 132, 201);
+$peacock: rgb(121, 185, 225);
+$sage: rgb(55, 183, 124);
+$tangerine: rgb(242, 81, 37);
+$tomato: rgb(211, 0, 6);
+
+// Breaks
+$mobile: 360px;
+$tabletSmall: 540px;
+$tablet: 760px;
+$tabletLarge: 1024px;
+$desktop: 1172px;
+
+// Spacing
+$xxxxs-size: 0.2rem;
+$xxxs-size: 0.3rem;
+$xxs-size: 0.6rem;
+$xs-size: 0.8rem;
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.0rem;
+$xxl-size: 4.8rem;
+$xxxl-size: 5.6rem;
+
+// Container
+.content-container {
+    margin: 0 auto;
+    position: relative;
+    width: 92%;
+}
+
+// Icon Size
+$xxxxs-icon: 0.4rem;
+$xxxs-icon: 0.6rem;
+$xxs-icon: 0.8rem;
+$xs-icon: 1.2rem;
+$s-icon: 1.6rem;
+$m-icon: 2.0rem;
+$l-icon: 2.4rem;
+$xl-icon: 2.8rem;
+$xxl-icon: 3.0rem;
+$xxxl-icon: 3.4rem;
+
+// Font Size
+$xxxxs-font: 0.6rem;
+$xxxs-font: 0.8rem;
+$xxs-font: 1.0rem;
+$xs-font: 1.2rem;
+$s-font: 1.4rem;
+$reg-font: 1.6rem;
+$m-font: 2.0rem;
+$l-font: 2.4rem;
+$xl-font: 2.8rem;
+$xxl-font: 3.2rem;
+$xxxl-font: 4.8rem;
+
+// Map Size
+$s-map: 20em;
+$m-map: 30em;
+$l-map: 40em;

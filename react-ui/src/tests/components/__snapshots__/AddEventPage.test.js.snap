@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddEventPage correctly 1`] = `
+<div
+  className="calendar-add"
+>
+  <button
+    onClick={[Function]}
+  >
+    <Close />
+  </button>
+  <EventForm
+    onSetMessages={[Function]}
+    onSubmit={[Function]}
+  />
+  <EventFormModal
+    handleClearMessages={[Function]}
+    messages={Array []}
+  />
+</div>
+`;

@@ -1,0 +1,208 @@
+.calendar-yearly__title {
+    display: flex;
+    font-size: $m-font;
+    margin: 0;
+    padding: $s-size;
+    position: relative;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.calendar-yearly__view {
+    display: flex;
+    flex-direction: column;
+    padding: 0 $s-size;
+    width: 100%;
+}
+
+.calendar-yearly__month {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $s-size;
+    width: 100%;
+
+    .month-title {
+        color: #999;
+        cursor: default;
+        font-size: $xxs-font;
+        line-height: $xs-font;
+        letter-spacing: 0;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-align: center;
+        text-transform: uppercase;
+        padding: $xxs-size $s-size 0 0;
+    }
+
+    .calendar-month {
+        align-items: center;
+        border-top: solid 1px $border;
+        border-left: solid 1px $border;
+        cursor: pointer;
+        display: flex;
+        font-size: $xxs-font;
+        height: fit-content;
+        position: relative;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .month-days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 2fr;
+        grid-auto-rows: 2fr;
+        width: 100%;
+    }
+
+    .calendar-day {
+        align-items: center;
+        border-bottom: solid 1px $border;
+        border-right: solid 1px $border;
+        display: flex;
+        font-size: $xxs-font;
+        padding: $xxs-size 0;
+        position: relative;
+        justify-content: center;
+        width: 1fr;
+    }
+
+    .holiday {
+
+        .day-event {
+            background: $main;
+            border-radius: 50%;
+            height: $xxxs-size;
+            position: absolute;
+            top: $xxxxs-size;
+            left: $xxxxs-size;
+            width: $xxxs-size;
+        }
+    }
+    .day-event {
+        border-radius: 50%;
+        height: $xxxs-size;
+        position: absolute;
+        bottom: $xxxxs-size;
+        right: $xxxxs-size;
+        width: $xxxs-size;
+    }
+    
+    .pre-next {
+        color: #ccc;
+
+        .day-event {
+            opacity: .3;
+        }
+    }
+    
+    .current-day {
+        align-items: center;
+        background: $main;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        font-weight: bold;
+        height: $m-icon;
+        justify-content: center;
+        margin: -$xxs-size 0;
+        padding-bottom: 1px;
+        width: $m-icon;
+    }
+}
+.current-month .calendar-month {
+    border-left: solid 2px $main;
+    margin-left: -1px;
+}
+
+.current-month .month-title {
+    color: $main;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: $mobile) {
+    .calendar-yearly__title {
+        padding: $m-size;
+    }
+
+    .calendar-yearly__view {
+        padding: 0 $m-size;
+    }
+
+    .calendar-yearly__month {
+        margin-bottom: $m-size;
+
+        .month-title {
+            font-size: $s-font;
+            padding: $s-size $m-size 0 0;
+        }
+        .calendar-day {
+            padding: $s-size 0;
+        }
+        .holiday {
+
+            .day-event {
+                height: $xxs-size;
+                top: $xxxs-size;
+                left: $xxxs-size;
+                width: $xxs-size;
+            }
+        }
+        .day-event {
+            height: $xxs-size;
+            bottom: $xxxs-size;
+            right: $xxxs-size;
+            width: $xxs-size;
+        }
+
+        .current-day {
+            height: $l-icon;
+            margin: -$s-size 0;
+            width: $l-icon;
+        }
+    }
+}
+
+@media only screen and (min-width: $tabletSmall) {
+    .calendar-yearly__title {
+        font-size: $l-font;
+        padding: $m-size 0;
+    }
+
+    .calendar-yearly__view {
+        display: grid;
+        grid-gap: $m-size;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 $m-size;
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+    .calendar-yearly__title {
+        font-size: $xxl-font;
+        padding: $m-size 0;
+    }
+
+    .calendar-yearly__view {
+        display: grid;
+        grid-gap: $m-size;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 $m-size;
+    }
+}
+
+@media only screen and (min-width: $tabletLarge) {
+    .calendar-yearly__view {
+        display: grid;
+        grid-gap: $m-size;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 $m-size;
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    .calendar-yearly__title {
+        font-size: $xl-font;
+        padding: $m-size 0 $xl-size;
+    }
+}

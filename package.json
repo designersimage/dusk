@@ -1,0 +1,32 @@
+{
+  "name": "dusk-app",
+  "version": "1.0.0",
+  "description": "A life management app",
+  "engines": {
+    "node": "10.x"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "cd react-ui/ && npm install && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jwheeler0424/calendar-app.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "calendar",
+    "dusk",
+    "react"
+  ],
+  "license": "MIT",
+  "devDependencies": {}
+}
