@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/design82/dusk/
+    - /bin/cp -R * $DEPLOYPATH
