@@ -38,6 +38,6 @@ if (cluster.isMaster) {
   });
 
   app.listen(PORT, function () {
-    console.error(`Node ${'cluster worker '+process.pid}: listening on port ${PORT}`);
+    console.log(`Node ${'cluster worker '+process.pid}: listening on port ${PORT}`);
   });
 }
