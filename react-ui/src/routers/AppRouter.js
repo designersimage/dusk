@@ -15,7 +15,7 @@ const AppRouter = () => {
             <div>
                 <Switch>
                     <PublicRoute path="/" component={LoginPage} exact={true} />
-                    <PublicRoute patch="/calendar" component={CalendarDashboardPage} />
+                    <PrivateRoute patch="/calendar" component={CalendarDashboardPage} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </div>
