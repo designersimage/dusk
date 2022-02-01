@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
 
 // Multi-process to utilize all CPU cores.
-if (cluster.isMaster) {
+if (!isDev && cluster.isMaster) {
   console.error(`Node cluster master ${process.pid} is running`);
 
   // Fork workers.
@@ -38,6 +38,6 @@ if (cluster.isMaster) {
   });
 
   app.listen(PORT, function () {
-    console.log(`Node ${'cluster worker '+process.pid}: listening on port ${PORT}`);
+    console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
   });
 }
