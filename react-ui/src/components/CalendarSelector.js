@@ -9,7 +9,6 @@ const CalendarSelector = () => {
     const [yearMenuOpen, setYearMenuOpen] = useState('');
 
     const onMonthMenuChange = (menuOpen) => {
-        alert(menuOpen);
         if (monthMenuOpen === menuOpen) {
             setMonthMenuOpen('');
         } else {

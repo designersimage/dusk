@@ -13,7 +13,7 @@ const ColorPicker = (props) => {
     }, [props.color])
 
     const [colorMenuOpen, setColorMenuOpen] = useState('');
-    const toggleColorSelectMenu = (e) => {
+    const toggleColorSelectMenu = () => {
         colorMenuOpen === ' open' ? setColorMenuOpen('') : setColorMenuOpen(' open');
     }
     const selectColor = (e) => {
@@ -26,7 +26,7 @@ const ColorPicker = (props) => {
     
     return (
         <div className="color-selector__wrapper">
-            <button className="color-selector__selected" onClick={toggleColorSelectMenu} title="Select Event Color">
+            <button className="color-selector__selected" onClick={toggleColorSelectMenu} title="Select Event Color" type="button">
                 <span className="color-selector__title" style={{background: color.value}}></span>
                 <ExpandMore className="material-icons" />
             </button>

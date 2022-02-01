@@ -41,7 +41,7 @@
 }
 
 .color-selector__selector.open {
-    transform: scaleY(100%);
+    transform: scaleY(1);
     .color-selector__select {
         opacity: 1;
         transition: opacity 350ms ease-in-out 150ms;
@@ -119,7 +119,7 @@
 }
 
 .month-selector__selector.open {
-    transform: scaleY(100%);
+    transform: scaleY(1);
     .month-selector__select {
         opacity: 1;
         transition: opacity 350ms ease-in-out 150ms;
@@ -190,7 +190,7 @@
 }
 
 .year-selector__selector.open {
-    transform: scaleY(100%);
+    transform: scaleY(1);
     .year-selector__select {
         opacity: 1;
         transition: opacity 350ms ease-in-out 150ms;
